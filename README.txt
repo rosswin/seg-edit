@@ -1,0 +1,1 @@
+Seg-Edit is a set of geoprocessing scripts designed to edit or update image segments. Seg-Edit is designed to work in QGIS 2.18.
