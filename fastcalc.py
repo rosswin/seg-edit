@@ -5,15 +5,15 @@ from qgis.gui import *
 import qgis.utils
 import processing
 import re
-from PyQt4.QtCore import *
+from PyQt5.QtCore import *
 
 valid_hires_ccap_values = [0, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,24, 25]
 
 layer = qgis.utils.iface.activeLayer()
 selected = layer.selectedFeatures()
 
-old_idx = layer.fieldNameIndex('CCAP')
-new_idx = layer.fieldNameIndex('CCAP_2016')
+old_idx = layer.fields().indexFromName('2001_ccap')
+new_idx = layer.fields().indexFromName('2015_ccap')
 
 ids = []
 for sel in selected:
